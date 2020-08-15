@@ -4,7 +4,6 @@
 	});
 
 	Route::set('about-us', function() {
-		AboutUs::CreateView('AboutUs');
-		$tests = AboutUs::test();
-		print_r($tests);
+		$tests = AboutUs::test(); 
+		AboutUs::CreateView('AboutUs', ['tests' => $tests]);
 	});
