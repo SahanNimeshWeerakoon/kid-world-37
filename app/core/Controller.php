@@ -1,5 +1,13 @@
 <?php
+require_once '../app/core/Model.php';
 
-class Controller {
-	
+class Controller extends Model {
+	// public function model($model) {
+	// 	require_once '../app/models/'.$model.'.php';
+	// 	return new $model();
+	// }
+
+	public function view($view, $data=[]) {
+		require_once '../app/views/'.$view.'.php';
+	}
 }
