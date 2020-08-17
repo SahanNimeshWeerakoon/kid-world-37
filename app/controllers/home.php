@@ -1,6 +1,6 @@
 <?php
 class Home extends Controller {
-	public function index($name='') {
+	public function index() {
 
 		# insert value
 		// $values = [
@@ -16,6 +16,19 @@ class Home extends Controller {
 
 		# return a view with data
 		// $this->view('home/index', ['name'=>$user->name]);
-	}
 
+		# get values
+		// $table = 'products';
+		// $where = "title='samaposha'";	// Nullable
+		// $fields = "title, description";	// If null everything is fetched
+		// $products = self::read($table, $where, $fields);
+
+		// foreach($products as $product) {
+		// 	echo $product->title.'-'.$product->description.'<br />';
+		// }
+
+
+		# return a view with data
+		$this->view('home/index');
+	}
 }

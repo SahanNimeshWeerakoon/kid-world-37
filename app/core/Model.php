@@ -49,5 +49,17 @@ class Model {
 
 		$stmt = $pdo->prepare($sql);
 		$stmt->execute();
+
+		return $stmt->fetchAll();
+	}
+
+	public function update($table, $values, $where) {
+		$pdo = self::connect();
+		$sql = "UPDATE $TABLE set $values WHERE $where";
+
+		$stmt = $pdo->prepare($sql);
+		$stmt->execute($sql);
+
+		return $sql;
 	}
 }
