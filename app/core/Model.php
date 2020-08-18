@@ -62,4 +62,14 @@ class Model {
 
 		return $sql;
 	}
+
+	public function getNewProducts() {
+		$pdo = self::connect();
+
+		$sql = "SELECT * FROM products ORDER BY id desc LIMIT 12";
+		$stmt = $pdo->prepare($sql);
+		$stmt->execute();
+
+		return $stmt->fetchAll();
+	}
 }

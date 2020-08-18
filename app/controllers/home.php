@@ -29,6 +29,8 @@ class Home extends Controller {
 
 
 		# return a view with data
-		$this->view('home/index');
+		$newProducts = self::getNewProducts();
+
+		$this->view('home/index', ['products'=>$newProducts]);
 	}
 }
