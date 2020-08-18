@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Kid World</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="stylesheet" href="/Sales&Marketing/public/css/style.css" />
 </head>
 <body>
 	<div class="row">
@@ -27,13 +27,25 @@
 		</div>
 	</div>
 	<div class="d-flex justify-content-center mt-5">
-		<img src="./assets/images/kid-world-logo.png" alt="kid world logo" title="kid world logo" class="img-fluid" />
+		<img src="/Sales&Marketing/public/assets/images/kid-world-logo.png" alt="kid world logo" title="kid world logo" class="img-fluid" />
 	</div>
 	<div class="d-flex justify-content-center">
-		<a href="./" class="text-info nav-link h3">Home</a>
-		<a href="/toys" class="text-info nav-link h3">Toys</a>
-		<a href="/cloths" class="text-info nav-link h3">Clothes</a>
-		<a href="/stationaries" class="text-info nav-link h3">Stationaries</a>
-		<a href="/books" class="text-info nav-link h3">Books</a>
-		<a href="/school" class="text-info nav-link h3">School</a>
+		<a href="/Sales&Marketing/public/" class="text-info nav-link h3">Home</a>
+		<a href="/Sales&Marketing/public/categories/products/toys" class="text-info nav-link h3">Toys</a>
+		<a href="/Sales&Marketing/public/categories/products/cloths" class="text-info nav-link h3">Clothes</a>
+		<a href="/Sales&Marketing/public/categories/products/stationaries" class="text-info nav-link h3">Stationaries</a>
+		<a href="/Sales&Marketing/public/categories/products/books" class="text-info nav-link h3">Books</a>
+		<a href="/Sales&Marketing/public/categories/products/school" class="text-info nav-link h3">School</a>
 	</div>
+
+
+
+
+
+
+
+
+
+
+
+

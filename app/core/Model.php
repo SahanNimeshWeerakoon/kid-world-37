@@ -72,4 +72,14 @@ class Model {
 
 		return $stmt->fetchAll();
 	}
+
+	public function getProductByCategory($category) {
+		$pdo = self::connect();
+
+		$sql = "SELECT * FROM products WHERE category=:category";
+		$stmt = $pdo->prepare($sql);
+		$stmt->execute(['category'=>$category]);
+
+		return $stmt->fetchAll();
+	}
 }
