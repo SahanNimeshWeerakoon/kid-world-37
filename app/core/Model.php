@@ -82,4 +82,15 @@ class Model {
 
 		return $stmt->fetchAll();
 	}
+
+	public function loginUser($username, $password) {
+		$pdo = self::connect();
+
+		$sql = "SELECT * FROM users WHERE username=:username AND password=:password";
+		$stmt = $pdo->prepare($sql);
+		$stmt->execute(['username'=>$username, 'password'=>$password]);
+		$users = $stmt->fetchAll();
+
+		return $users;
+	}
 }

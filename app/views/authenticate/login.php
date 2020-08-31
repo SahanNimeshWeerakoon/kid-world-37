@@ -1,3 +1,25 @@
+<?php
+	session_start();
+	
+	$message = '';
+	
+	if(isset($_POST['submit'])) {
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+		if($username!=='' && $password!=='') {
+
+			require_once('../app/core/Model.php');
+			$model = new Model();
+			$users = $model::loginUser($username, $password);
+			
+			// if() {
+
+			// }
+		} else {
+			$message = 'Please insert username and password.';
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +31,20 @@
 <body>
 	<div class="login container d-flex flex-column align-items-center justify-content-center" style="min-height: 100vh;">
 		<h1 class="text-dark text-center mb-5">LOGIN</h1>
-		<div class="row">
-			<form action="" method="POST" class="text-center">
-				<div class="form-group">
-					<label for="username" class="h5">Username</label>
-					<input type="text" name="username" id="username" />
+		<div class="row" style="width: 30%;">
+			<form action="" method="POST" style="width: 100%;">
+				<div class="text-danger">
+					<h6><?= $message ?></h6>
 				</div>
 				<div class="form-group">
-					<label for="password" class="h5">Password</label>
-					<input type="password" name="password" id="password" />
+					<label for="username">Username</label>
+					<input type="text" name="username" id="username" class="form-control" />
 				</div>
-				<button class="btn btn-primary float-right">LOGIN</button>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password" class="form-control" />
+				</div>
+				<button class="btn btn-primary float-right" name="submit" value="login">LOGIN</button>
 			</form>
 		</div>
 	</div>
